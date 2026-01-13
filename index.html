@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Java Versions & JEPs — Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Java Versions & JEPs — Quick Guide</h1>
+      <p class="lead">Overview of Java's release model, LTS vs non-LTS, and how JEPs shape new features and deprecations.</p>
+    </header>
+
+    <div class="grid">
+      <div>
+        <section class="box">
+          <h2>What changed in Java's release cadence?</h2>
+          <p class="note">Since Java 9, the JDK uses a time-driven release cadence: a new feature release every 6 months (March/September), with Long-Term Support (LTS) releases approximately every 3 years. This makes features arrive faster but encourages using LTS builds in production for stability.</p>
+
+          <h3>Versioning model</h3>
+          <ul>
+            <li>Before Java 9: unpredictable major releases (e.g., Java 7, 8)</li>
+            <li>Since Java 9: semantic-like versioning but time-driven (e.g., 9, 10, 11, 12, ...). LTS: 8, 11, 17, 21, ...</li>
+            <li>Feature releases are supported for a shorter lifecycle; vendors provide LTS builds for production.</li>
+          </ul>
+
+          <h3>Key concepts</h3>
+          <ul>
+            <li><strong>LTS (Long-Term Support)</strong> — chosen releases with extended vendor support.</li>
+            <li><strong>Non-LTS</strong> — faster feature delivery, shorter support window.</li>
+            <li><strong>JEPs</strong> — Java Enhancement Proposals: design documents that propose features, APIs, and changes.</li>
+          </ul>
+
+          <h3>Major JDK releases (quick list)</h3>
+          <table>
+            <thead><tr><th>Version</th><th>Release</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>8</td><td>2014 (LTS)</td><td>Widely used LTS; no module system</td></tr>
+              <tr><td>9</td><td>2017</td><td>Module system (Jigsaw), lots of JEPs</td></tr>
+              <tr><td>11</td><td>2018 (LTS)</td><td>LTS; many JEPs stabilized</td></tr>
+              <tr><td>17</td><td>2021 (LTS)</td><td>Sealed types, new macOS rendering, etc.</td></tr>
+              <tr><td>21</td><td>2023 (LTS)</td><td>Recent LTS with improvements to records, patterns</td></tr>
+            </tbody>
+          </table>
+
+          <h3>How JEPs work (short)</h3>
+          <p>JEP = proposal document that explains motivation, specification, and compatibility implications. A JEP can be:</p>
+          <ul>
+            <li>Targeted for a specific JDK release</li>
+            <li>Marked as <em>proposed</em>, <em>accepted</em>, <em>implemented</em>, or <em>targeted</em></li>
+            <li>Include early-access builds for feedback</li>
+          </ul>
+
+          <h3>Notable JEPs (examples)</h3>
+          <ul>
+            <li><strong>JEP 223</strong> — New Date/Time API (was JSR 310) (note: different historical numbering)</li>
+            <li><strong>JEP 261</strong> — Module system (part of Java 9)</li>
+            <li><strong>JEP 355</strong> — Text Blocks (preview -> standard)</li>
+            <li><strong>JEP 409</strong> — Sealed Classes (preview -> standard in later JDKs)</li>
+            <li><strong>JEP 405</strong> — Record Patterns & Pattern Matching improvements</li>
+          </ul>
+
+          <h3>Choosing a Java version</h3>
+          <ul>
+            <li>Use LTS (11, 17, 21...) for production unless you need a specific new feature.</li>
+            <li>For new projects, consider the latest LTS and test on newer non-LTS to adopt features earlier.</li>
+          </ul>
+
+        </section>
+
+        <section class="box">
+          <h2>How to check your Java/JDK version</h2>
+          <p class="muted">Run in a terminal:</p>
+          <pre><code>java --version
+javac --version</code></pre>
+          <p>Example output (openjdk):</p>
+          <pre><code>openjdk 17.0.8 2024-07-16
+OpenJDK Runtime Environment (build 17.0.8+7-LTS)</code></pre>
+
+          <h3>Identifying LTS vs feature</h3>
+          <ul>
+            <li>Major version numbers in the table above — cross-check with vendor release notes.</li>
+            <li>Oracle and other vendors mark LTS in their downloads pages.</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside>
+        <section class="box">
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="https://openjdk.org/">OpenJDK</a></li>
+            <li><a href="https://openjdk.java.net/jeps/0">All JEPs (index)</a></li>
+            <li><a href="https://www.oracle.com/java/technologies/java-se-support-roadmap.html">Oracle Java SE Roadmap</a></li>
+          </ul>
+
+          <h3>Quick glossary</h3>
+          <p class="pill">JDK — Java Development Kit</p>
+          <p class="pill">JRE — Java Runtime Environment (deprecated as separate distribution)</p>
+          <p class="pill">JEP — Java Enhancement Proposal</p>
+
+          <h3>Small checklist for upgrading</h3>
+          <ul>
+            <li>Run tests on the target JDK</li>
+            <li>Check deprecated APIs and removed features in relevant JDK release notes</li>
+            <li>Verify third-party library compatibility (especially native code)</li>
+          </ul>
+
+          <div style="margin-top:8px;font-size:13px;color:var(--muted)">Last updated: <span id="updated">—</span></div>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <p>Want this page customized (e.g., localization, printable timeline, or integrated JEP links)? I can extend it — tell me what you need.</p>
+    </footer>
+  </main>
+
+  <script>
+    // small script to insert the current date
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
+
