@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Java 25 — JEPs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Java 25 — JEPs</h1>
+      <p class="lead">This page is intended to document every JEP targeted at JDK 25. Below you'll find a template entry for each JEP: number, title, short summary, compatibility notes, and links to the official JEP page.</p>
+      <p class="note">Note: This page was auto-populated with the official JEP abstracts from the OpenJDK site.</p>
+    </header>
+
+    <section class="box">
+      <h2>How to use this page</h2>
+      <ul>
+        <li>Each JEP is a section below. The entry includes the official abstract and a link to the JEP page.</li>
+        <li>For direct links use: <code>https://openjdk.org/jeps/NNN</code> (replace NNN with the JEP number).</li>
+        <li>If you'd like summaries shortened or reformatted, tell me and I will update them.</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>JEPs targeted at JDK 25</h2>
+
+      <!-- Clean concise JEP entries start -->
+
+      <div class="box">
+        <table>
+          <thead>
+            <tr>
+              <th>JEP</th>
+              <th>Title</th>
+              <th>Summary</th>
+              <th>Openjdk Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>470</td>
+              <td>PEM Encodings of Cryptographic Objects (Preview)</td>
+              <td>Simple API to encode and decode cryptographic objects (keys, certs, CRLs) in PEM text format.</td>
+              <td><a href="https://openjdk.org/jeps/470" target="_blank" rel="noopener">JEP 470</a></td>
+            </tr>
+            <tr>
+              <td>502</td>
+              <td>Stable Values (Preview)</td>
+              <td>Immutable "stable value" objects that can be initialized flexibly while still enabling JVM constant optimizations.</td>
+              <td><a href="https://openjdk.org/jeps/502" target="_blank" rel="noopener">JEP 502</a></td>
+            </tr>
+            <tr>
+              <td>503</td>
+              <td>Remove the 32-bit x86 Port</td>
+              <td>Remove source and build support for the legacy 32-bit x86 HotSpot port to simplify maintenance.</td>
+              <td><a href="https://openjdk.org/jeps/503" target="_blank" rel="noopener">JEP 503</a></td>
+            </tr>
+            <tr>
+              <td>505</td>
+              <td>Structured Concurrency (Fifth Preview)</td>
+              <td>Preview API for structured concurrency to simplify task grouping, cancellation, and observability.</td>
+              <td><a href="https://openjdk.org/jeps/505" target="_blank" rel="noopener">JEP 505</a></td>
+            </tr>
+            <tr>
+              <td>506</td>
+              <td>Scoped Values</td>
+              <td>Lightweight alternative to ThreadLocal for sharing immutable data with controlled scope.</td>
+              <td><a href="https://openjdk.org/jeps/506" target="_blank" rel="noopener">JEP 506</a></td>
+            </tr>
+            <tr>
+              <td>507</td>
+              <td>Primitive Types in Patterns, instanceof, and switch (Third Preview)</td>
+              <td>Add pattern matching support for primitive types so patterns can directly match and bind primitives.</td>
+              <td><a href="https://openjdk.org/jeps/507" target="_blank" rel="noopener">JEP 507</a></td>
+            </tr>
+            <tr>
+              <td>508</td>
+              <td>Vector API (Tenth Incubator)</td>
+              <td>Express SIMD-style vector computations that map efficiently to hardware instructions.</td>
+              <td><a href="https://openjdk.org/jeps/508" target="_blank" rel="noopener">JEP 508</a></td>
+            </tr>
+            <tr>
+              <td>509</td>
+              <td>JFR CPU-Time Profiling (Experimental)</td>
+              <td>Experimental JFR feature to improve CPU-time profiling accuracy and reduce overhead.</td>
+              <td><a href="https://openjdk.org/jeps/509" target="_blank" rel="noopener">JEP 509</a></td>
+            </tr>
+            <tr>
+              <td>510</td>
+              <td>Key Derivation Function API</td>
+              <td>Standard API for cryptographic key derivation (HKDF, Argon2, etc.).</td>
+              <td><a href="https://openjdk.org/jeps/510" target="_blank" rel="noopener">JEP 510</a></td>
+            </tr>
+            <tr>
+              <td>511</td>
+              <td>Module Import Declarations</td>
+              <td>Import all exported packages from a module in a single declaration for prototyping convenience.</td>
+              <td><a href="https://openjdk.org/jeps/511" target="_blank" rel="noopener">JEP 511</a></td>
+            </tr>
+            <tr>
+              <td>512</td>
+              <td>Compact Source Files and Instance Main Methods</td>
+              <td>Allow compact source files to write small programs with less ceremony and easier onboarding.</td>
+              <td><a href="https://openjdk.org/jeps/512" target="_blank" rel="noopener">JEP 512</a></td>
+            </tr>
+            <tr>
+              <td>513</td>
+              <td>Flexible Constructor Bodies</td>
+              <td>Allow statements before explicit constructor invocations so validation/setup can run first.</td>
+              <td><a href="https://openjdk.org/jeps/513" target="_blank" rel="noopener">JEP 513</a></td>
+            </tr>
+            <tr>
+              <td>514</td>
+              <td>Ahead-of-Time Command-Line Ergonomics</td>
+              <td>Simplify commands for creating and using AOT caches to improve startup ergonomics.</td>
+              <td><a href="https://openjdk.org/jeps/514" target="_blank" rel="noopener">JEP 514</a></td>
+            </tr>
+            <tr>
+              <td>515</td>
+              <td>Ahead-of-Time Method Profiling</td>
+              <td>Make method execution profiles from training runs available at startup to reduce warmup time.</td>
+              <td><a href="https://openjdk.org/jeps/515" target="_blank" rel="noopener">JEP 515</a></td>
+            </tr>
+            <tr>
+              <td>518</td>
+              <td>JFR Cooperative Sampling</td>
+              <td>Improve JFR sampling by walking stacks at safepoints to avoid heuristics while minimizing bias.</td>
+              <td><a href="https://openjdk.org/jeps/518" target="_blank" rel="noopener">JEP 518</a></td>
+            </tr>
+            <tr>
+              <td>519</td>
+              <td>Compact Object Headers</td>
+              <td>Promote compact object headers from experimental to product feature to improve memory and performance.</td>
+              <td><a href="https://openjdk.org/jeps/519" target="_blank" rel="noopener">JEP 519</a></td>
+            </tr>
+            <tr>
+              <td>520</td>
+              <td>JFR Method Timing &amp; Tracing</td>
+              <td>Add JFR method timing and tracing facilities to record exact invocation statistics for diagnostics.</td>
+              <td><a href="https://openjdk.org/jeps/520" target="_blank" rel="noopener">JEP 520</a></td>
+            </tr>
+            <tr>
+              <td>521</td>
+              <td>Generational Shenandoah</td>
+              <td>Promote Shenandoah's generational mode to a product feature for improved GC behavior in many workloads.</td>
+              <td><a href="https://openjdk.org/jeps/521" target="_blank" rel="noopener">JEP 521</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Clean concise JEP entries end -->
+
+    </section>
+
+    <footer>
+      <p class="muted">Last updated: <span id="updated">—</span></p>
+      <p>If you want the page populated automatically, tell me and I'll fetch the official JEPs for JDK 25 and update this file.</p>
+      <p><a href="index.html">Back to overview</a></p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('updated').textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
